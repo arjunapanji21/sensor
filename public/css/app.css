@@ -1891,13 +1891,6 @@ html {
     opacity: 1;
   }
 }
-.m-10 {
-  margin: 2.5rem;
-}
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
 .h-6 {
   height: 1.5rem;
 }
@@ -1909,9 +1902,6 @@ html {
 }
 .stroke-current {
   stroke: currentColor;
-}
-.p-10 {
-  padding: 2.5rem;
 }
 .p-5 {
   padding: 1.25rem;
