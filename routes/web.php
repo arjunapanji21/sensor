@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SensorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [SensorController::class, 'index']);
+Route::get('/{id}/edit', [SensorController::class, 'edit']);
+Route::post('/{id}', [SensorController::class, 'update']);
+Route::delete('/{id}/delete', [SensorController::class, 'destroy']);

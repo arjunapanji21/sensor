@@ -7,10 +7,6 @@ module.exports = {
     ],
     theme: {
         extend: {},
-        screens: {
-            mobile: "320px",
-            desktop: "900px",
-        },
     },
     plugins: [require("daisyui")],
 };
