@@ -23,15 +23,15 @@ class SensorController extends Controller
         $kelembaban = [];
         $latest = Sensor::orderBy('id', 'desc')->first();
 
-        foreach($data as $row){
+        foreach(Sensor::orderBy('waktu', 'asc')->get() as $row){
             $waktu[] = $row->waktu;
         }
 
-        foreach($data as $row){
+        foreach(Sensor::orderBy('waktu', 'asc')->get() as $row){
             $suhu[] = $row->temp_avg;
         }
 
-        foreach($data as $row){
+        foreach(Sensor::orderBy('waktu', 'asc')->get() as $row){
             $kelembaban[] = $row->humid_avg;
         }
 
