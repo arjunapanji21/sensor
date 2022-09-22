@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </div>
-        @endif
+        @endif 
         <div
             class="justify-center text-center text-xl lg:text-2xl font-bold pt-5"
         >

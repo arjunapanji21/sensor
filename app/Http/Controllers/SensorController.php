@@ -109,6 +109,8 @@ class SensorController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->except(['_method','_token']);
+        $data['temp_avg'] = (int)(($data['temp_1'] + $data['temp_2'] + $data['temp_3']) / 3);
+        $data['humid_avg'] = (int)(($data['humid_1'] + $data['humid_2'] + $data['humid_3']) / 3);
         Sensor::find($id)->update($data);
         return redirect('/')->with('success', 'Data berhasil diupdate!');
     }
