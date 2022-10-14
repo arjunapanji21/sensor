@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </div>
-        @endif 
+        @endif
         <div
             class="justify-center text-center text-xl lg:text-2xl font-bold pt-5"
         >
@@ -83,7 +83,7 @@
                                         --thickness: 1.5rem;
                                     "
                                 >
-                                    {{ $latest->humid_avg }}
+                                    {{ $latest->humid_avg }}%
                                 </div>
                                 <div class="text-center pt-2">Kelembaban</div>
                             </div>
@@ -167,7 +167,7 @@
                                         --thickness: 1rem;
                                     "
                                 >
-                                    {{ $latest->humid_1 }}
+                                    {{ $latest->humid_1 }}%
                                 </div>
                             </div>
                             <div class="grid pt-5 grid-cols-2 w-full gap-5">
@@ -200,7 +200,7 @@
                                         --thickness: 1rem;
                                     "
                                 >
-                                    {{ $latest->humid_2 }}
+                                    {{ $latest->humid_2 }}%
                                 </div>
                             </div>
                             <div class="grid pt-5 grid-cols-2 w-full gap-5">
@@ -233,7 +233,7 @@
                                         --thickness: 1rem;
                                     "
                                 >
-                                    {{ $latest->humid_3 }}
+                                    {{ $latest->humid_3 }}%
                                 </div>
                             </div>
                             <div class="grid pt-5 grid-cols-2 w-full gap-5">
@@ -271,17 +271,19 @@
                                     <th>Rata-rata Kelembaban</th>
                                     <th>PWM Kipas</th>
                                     <th>PWM Pompa</th>
+                                    <th>Keterangan</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
                                 @foreach($data as $row)
                                 <tr class="hover">
-                                    <th>{{ $row->waktu }}</th>
+                                    <th>{{ $row->created_at }}</th>
                                     <td>{{ $row->temp_avg }}° C</td>
-                                    <td>{{ $row->humid_avg }}</td>
+                                    <td>{{ $row->humid_avg }}%</td>
                                     <td>{{ $row->pwm_kipas }}</td>
                                     <td>{{ $row->pwm_pompa }}</td>
+                                    <td>{{ $row->keterangan }}</td>
                                     <td>
                                         <div class="dropdown dropdown-left">
                                             <label
@@ -325,6 +327,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                    </div>
+                    <div class="mt-2">
+                        {{ $data->links() }}
                     </div>
                 </div>
             </div>

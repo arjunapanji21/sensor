@@ -15,7 +15,7 @@ class CreateSensorsTable extends Migration
     {
         Schema::create('sensors', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('waktu');
+            // $table->dateTime('waktu');
             $table->integer('temp_1');
             $table->integer('humid_1');
             $table->integer('temp_2');
@@ -25,8 +25,8 @@ class CreateSensorsTable extends Migration
             $table->integer('temp_avg');
             $table->integer('humid_avg');
             $table->string('keterangan')->nullable();
-            $table->integer('pwm_kipas')->default(0);
-            $table->integer('pwm_pompa')->default(0);
+            $table->integer('pwm_kipas');
+            $table->integer('pwm_pompa');
             $table->timestamps();
         });
     }

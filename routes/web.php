@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SensorController::class, 'index']);
+Route::get('/store', [SensorController::class, 'store']);
 Route::get('/{id}/edit', [SensorController::class, 'edit']);
 Route::post('/{id}', [SensorController::class, 'update']);
 Route::delete('/{id}/delete', [SensorController::class, 'destroy']);

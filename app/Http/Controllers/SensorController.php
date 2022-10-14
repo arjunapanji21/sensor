@@ -17,21 +17,15 @@ class SensorController extends Controller
      */
     public function index()
     {
-        $data = Sensor::orderBy('waktu', 'desc')->get();
+        $data = Sensor::orderBy('created_at', 'desc')->paginate(10);
         $waktu = [];
         $suhu = [];
         $kelembaban = [];
         $latest = Sensor::orderBy('id', 'desc')->first();
 
-        foreach(Sensor::orderBy('waktu', 'asc')->get() as $row){
-            $waktu[] = $row->waktu;
-        }
-
-        foreach(Sensor::orderBy('waktu', 'asc')->get() as $row){
+        foreach(Sensor::orderBy('created_at', 'asc')->get() as $row){
+            $waktu[] = $row->created_at;
             $suhu[] = $row->temp_avg;
-        }
-
-        foreach(Sensor::orderBy('waktu', 'asc')->get() as $row){
             $kelembaban[] = $row->humid_avg;
         }
 

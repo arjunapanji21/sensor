@@ -145,6 +145,18 @@
                         />
                     </div>
                 </div>
+                <div class="form-control w-5/6 lg:w-1/2">
+                    <label class="label">
+                        <span class="label-text">Keterangan</span>
+                    </label>
+                    <input
+                        name="keterangan"
+                        type="text"
+                        class="input input-bordered w-full"
+                        value="{{ $data->keterangan }}"
+                    />
+                </div>
+
                 <div class="grid grid-cols-2 w-5/6 lg:w-1/2 gap-5 py-5">
                     <a href="/" class="btn">Cancel</a>
                     <button type="submit" class="btn btn-primary">
