@@ -249,17 +249,6 @@
             <div class="card bg-base-100 shadow-xl">
                 <div class="card-body item-center text-center">
                     <h2 class="card-title text-center justify-center">
-                        Statistic Pendeteksian
-                    </h2>
-                    <canvas id="lineChart"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-10">
-            <div class="card bg-base-100 shadow-xl">
-                <div class="card-body item-center text-center">
-                    <h2 class="card-title text-center justify-center">
                         Riwayat Pendeteksian
                     </h2>
                     <div class="overflow-x-auto">
@@ -331,6 +320,16 @@
                     <div class="mt-2">
                         {{ $data->links() }}
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="card p-10">
+            <div class="card bg-base-100 shadow-xl">
+                <div class="card-body item-center text-center">
+                    <h2 class="card-title text-center justify-center">
+                        Statistik Pendeteksian
+                    </h2>
+                    <canvas id="lineChart"></canvas>
                 </div>
             </div>
         </div>
